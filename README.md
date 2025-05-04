@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/lefht/ipeek/main/logo.png" width="100" alt="ipeek logo"/>
 </p>
 
-<h1 align="center">🧠 ipeek</h1>
+<h1 align="center">ipeek</h1>
 
 <p align="center">
   <i>A tiny Bash tool to interactively select a network interface and show its IP address</i><br/>
