@@ -6,7 +6,7 @@
 
 <p align="center">
   <i>A tiny Bash tool to interactively select a network interface and show its IP address</i><br/>
-  <b>Fast ⚡ | Lightweight 🪶 | Perfect for Raspberry Pi 🍓</b>
+  <b>Fast ⚡ | Lightweight 🪶 </b>
 </p>
 
 <p align="center">
@@ -14,3 +14,12 @@
   <a href="https://github.com/lefht/ipeek/issues"><img alt="Issues" src="https://img.shields.io/github/issues/lefht/ipeek?style=flat-square"></a>
   <a href="https://github.com/lefht/ipeek/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/lefht/ipeek?style=flat-square"></a>
 </p>
+
+## Usage
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lefht/ipeek.git
+   cd ipeek
+   chmod +x ipeek
+   ./ipeek
