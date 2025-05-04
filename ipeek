@@ -1,0 +1,32 @@
+#!/bin/bash
+# ippeek: A tool to select a network interface and display its IPv4 address
+
+if ! command -v ifconfig &> /dev/null; then
+    echo "ifconfig not found. Please install net-tools first."
+    exit 1
+fi
+
+interfaces=($(ifconfig -a | grep '^[a-zA-Z0-9]' | cut -d: -f1))
+
+echo "Available network interfaces:"
+for i in "${!interfaces[@]}"; do
+    echo "$((i+1)). ${interfaces[$i]}"
+done
+
+read -p "Select an interface by number: " selection
+
+if [[ ! "$selection" =~ ^[0-9]+$ ]] || (( selection < 1 || selection > ${#interfaces[@]} )); then
+    echo "Invalid selection."
+    exit 1
+fi
+
+iface=${interfaces[$((selection-1))]}
+echo "You selected: $iface"
+
+inet=$(ifconfig "$iface" | grep 'inet ' | awk '{print $2}')
+
+if [ -n "$inet" ]; then
+    echo "IPv4 address: $inet"
+else
+    echo "No IPv4 address found for $iface"
+fi
