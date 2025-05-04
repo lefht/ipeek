@@ -23,3 +23,8 @@
    cd ipeek
    chmod +x ipeek
    ./ipeek
+   ```
+
+## License
+
+This project is licensed under the [MIT License](https://github.com/lefht/ipeek/blob/main/LICENSE).
